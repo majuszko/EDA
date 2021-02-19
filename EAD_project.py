@@ -4,7 +4,7 @@ from glob import glob
 import matplotlib.pyplot as plt
 import sqlite3
 
-files = glob('yob*')
+files = glob('./data/yob*')
 files.sort()
 
 #TODO ZAD 1-3
@@ -254,7 +254,7 @@ def Zad10():
 
 #TODO ZAD 12
 def Zad12():
-    conn = sqlite3.connect("USA_ltper_1x1.sqlite")
+    conn = sqlite3.connect("./data/USA_ltper_1x1.sqlite")
     c = conn.cursor()
 
     SQL_F = pd.read_sql_query(
@@ -304,7 +304,7 @@ def Zad13():
     tab2=[]
     series_list=[]
     ALL=[]
-    conn = sqlite3.connect("USA_ltper_1x1.sqlite")
+    conn = sqlite3.connect("./data/USA_ltper_1x1.sqlite")
     c = conn.cursor()
 
     SQL_F = pd.read_sql_query(
